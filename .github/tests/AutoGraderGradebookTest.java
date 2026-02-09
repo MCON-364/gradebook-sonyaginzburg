@@ -506,11 +506,11 @@ class AutoGraderGradebookTest {
         assertEquals("C", gradebook.letterGradeFor("Charlie").get());
 
         // Check class average
-        assertEquals(82.0, gradebook.classAverage().get(), 0.01); // (95+90+85+80+70)/5
+        assertEquals(84.0, gradebook.classAverage().get(), 0.01); // (95+90+85+80+70)/5
 
         // Test undo
         assertTrue(gradebook.undo()); // Undo Charlie's grade
-        assertEquals(85.0, gradebook.classAverage().get(), 0.01); // (95+90+85+80)/4
+        assertEquals(87.5, gradebook.classAverage().get(), 0.01); // (95+90+85+80)/4
 
         // Remove student
         assertTrue(gradebook.removeStudent("Bob"));
